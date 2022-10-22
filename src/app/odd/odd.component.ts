@@ -1,10 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, Input, ViewEncapsulation } from "@angular/core";
 
 @Component({
-    selector: "app-odd",
-    templateUrl: "./odd.component.html",
-    styleUrls: ["./odd.component.css"]
+  selector: "app-odd",
+  templateUrl: "./odd.component.html",
+  styleUrls: ["./odd.component.css"],
+  encapsulation: ViewEncapsulation.Emulated, 
 })
 export class OddComponent {
-    constructor() {}
+  @Input() number: number;
+  constructor() {}
 }
